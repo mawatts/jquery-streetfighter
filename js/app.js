@@ -13,8 +13,15 @@ $(document).ready(function() {
 		//Play hadouken sound, hide ready gif, and show throwing gif
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').show();
-		$('.hadouken').show();
 		// animate hadouken to the right of the screen
+		$('.hadouken').finish().show().animate(
+			{'left': '1020px'},
+			500,
+			function() {
+				$(this).hide();
+				$(this).css('left', '540px');
+				}
+			);
 	})
 	.mouseup(function() {
 		//Hide throwing gif and show ready gif
