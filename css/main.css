@@ -50,3 +50,7 @@ body {
 	position: absolute;
 	z-index: 10;
 }
+
+* {
+	outline: red 1px solid;
+}
