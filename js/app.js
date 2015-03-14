@@ -1,18 +1,36 @@
+//Mouse functions for animation/image changes
 $(document).ready(function() {
+	playGame();
+});
+
+//Hadouken audio function
+function playHadouken () {
+	$('#hadouken-sound')[0].volume = 0.5;
+	$('#hadouken-sound')[0].load();
+	$('#hadouken-sound')[0].play();
+}
+
+//Cool audio function
+function playCool () {
+	$('#cool-sound')[0].volume = 0.5;
+	$('#cool-sound')[0].play();
+}
+
+function playGame() {
 	$('.ryu').mouseenter(function() {
 		//Show Ryu ready position gif and hide still image
-		$('.ryu-still').hide();
+		$('.ryu-hide').hide();
 		$('.ryu-ready').show();
 	})
 	.mouseleave(function() {
 		//Show Ryu still image and hide ready position gif
+		$('.ryu-hide').hide();
 		$('.ryu-still').show();
-		$('.ryu-ready').hide();
 	})
 	.mousedown(function() {
 		//Play hadouken sound, hide ready gif, and show throwing gif
 		playHadouken();
-		$('.ryu-ready').hide();
+		$('.ryu-hide').hide();
 		$('.ryu-throwing').show();
 		// animate hadouken to the right of the screen
 		$('.hadouken').finish().show().animate(
@@ -26,14 +44,24 @@ $(document).ready(function() {
 	})
 	.mouseup(function() {
 		//Hide throwing gif and show ready gif
-		$('.ryu-throwing').hide();
+		$('.ryu-hide').hide();
 		$('.ryu-ready').show();
 	});
-});
 
-//Hadouken audio function
-function playHadouken () {
-	$('#hadouken-sound')[0].volume = 0.5;
-	$('#hadouken-sound')[0].load();
-	$('#hadouken-sound')[0].play();
-}
+	//Keypress animation for audio and gif
+	$(document).keydown(function(e) {
+		if (e.keyCode == 88) {
+			playCool();
+			$('.ryu-hide').hide();
+			$('.ryu-cool').show();
+		}
+	})
+	.keyup(function(e) {
+		if (e.keyCode == 88) {
+			$('#cool-sound')[0].pause();
+			$('#cool-sound')[0].load();
+			$('.ryu-hide').hide();
+			$('.ryu-still').show();
+		}
+	});
+};
