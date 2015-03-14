@@ -11,6 +11,7 @@ $(document).ready(function() {
 	})
 	.mousedown(function() {
 		//Play hadouken sound, hide ready gif, and show throwing gif
+		playHadouken();
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').show();
 		// animate hadouken to the right of the screen
@@ -29,3 +30,10 @@ $(document).ready(function() {
 		$('.ryu-ready').show();
 	});
 });
+
+//Hadouken audio function
+function playHadouken () {
+	$('#hadouken-sound')[0].volume = 0.5;
+	$('#hadouken-sound')[0].load();
+	$('#hadouken-sound')[0].play();
+}
