@@ -59,6 +59,8 @@ function playGame() {
 	//Keypress animation for audio and gif
 	$(document).keydown(function(e) {
 		if (e.keyCode == 88) {
+			$('#ryu-theme')[0].pause();
+			$('#ryu-theme')[0].load();
 			playCool();
 			$('.ryu-hide').hide();
 			$('.ryu-cool').show();
@@ -68,6 +70,7 @@ function playGame() {
 		if (e.keyCode == 88) {
 			$('#cool-sound')[0].pause();
 			$('#cool-sound')[0].load();
+			playIntro();
 			$('.ryu-hide').hide();
 			$('.ryu-still').show();
 		}

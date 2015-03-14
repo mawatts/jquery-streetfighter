@@ -41,7 +41,7 @@ body {
 	background-image: url('../images/ryu-cool.gif');
 }
 
-.hadouken, .ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool {
+.hadouken, .ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool, .jquery-logo, .sf-logo {
 	background-repeat: no-repeat;
 }
 
@@ -55,4 +55,26 @@ body {
 	z-index: 10;
 	top: 170px;
 	left: 540px;
+}
+
+.sf-logo {
+	background-image: url('../images/street-fighter-logo.png');
+	width: 700px;
+	height: 349px;
+	display: none;
+	float: left;
+	position: absolute;
+	top: 60px;
+	left: 600px;
+}
+
+.jquery-logo {
+	background-image: url('../images/jQuery-Logo.png');
+	width: 700px;
+	height: 178px;
+	//display: none;
+	float: left;
+	position: absolute;
+	top: 170px;
+	left: 615px;
 }
