@@ -1,6 +1,7 @@
 //Mouse functions for animation/image changes
 $(document).ready(function() {
 	playGame();
+	intro();
 });
 
 //Hadouken audio function
@@ -14,6 +15,13 @@ function playHadouken () {
 function playCool () {
 	$('#cool-sound')[0].volume = 0.5;
 	$('#cool-sound')[0].play();
+}
+
+//Intro theme music
+function playIntro () {
+	$('#ryu-theme')[0].volume = 0.2;
+	$('#ryu-theme')[0].load();
+	$('#ryu-theme')[0].play();
 }
 
 function playGame() {
@@ -64,4 +72,9 @@ function playGame() {
 			$('.ryu-still').show();
 		}
 	});
-};
+}
+
+function intro() {
+	playIntro();
+
+}
