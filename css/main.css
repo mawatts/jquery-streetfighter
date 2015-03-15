@@ -41,7 +41,7 @@ body {
 	background-image: url('../images/ryu-cool.gif');
 }
 
-.hadouken, .ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool, .jquery-logo, .sf-logo {
+.hadouken, .ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool {
 	background-repeat: no-repeat;
 }
 
@@ -50,7 +50,6 @@ body {
 	width: 156px;
 	height: 90px;
 	display: none;
-	float: left;
 	position: absolute;
 	z-index: 10;
 	top: 170px;
@@ -62,7 +61,6 @@ body {
 	width: 700px;
 	height: 349px;
 	display: none;
-	position: absolute;
 }
 
 .jquery-logo {
@@ -87,7 +85,7 @@ body {
 	display: none;
 	color: red;
 	font-size: 50px;
-	width: 650px;
+	width: 600px;
 }
 
 .brought-by {
@@ -96,7 +94,7 @@ body {
 }
 
 .how-to {
-	padding-top: 70px;
+	padding-top: 30px;
 }
 
 .how-to p {
@@ -113,4 +111,7 @@ body {
 .courtesy {
 	color: white;
 	font-size: 12px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
