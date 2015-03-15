@@ -83,10 +83,9 @@ body {
 }
 
 .brought-by, .how-to {
-	font-family: 'Cherry Cream Soda', 'Rock Salt', cursive;
+	font-family: 'Rock Salt', cursive;
 	display: none;
 	color: red;
-	font-family: comical;
 	font-size: 50px;
 	width: 650px;
 }
