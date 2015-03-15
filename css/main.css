@@ -62,19 +62,56 @@ body {
 	width: 700px;
 	height: 349px;
 	display: none;
-	float: left;
 	position: absolute;
-	top: 60px;
-	left: 600px;
 }
 
 .jquery-logo {
 	background-image: url('../images/jQuery-Logo.png');
 	width: 700px;
 	height: 178px;
-	//display: none;
-	float: left;
+	display: none;
 	position: absolute;
-	top: 170px;
-	left: 615px;
+	top: 180px;
+}
+
+.text-content {
+	width: 500px;
+	height: 400px;
+	padding-top: 75px;
+	position: absolute;
+	left: 650px;
+}
+
+.brought-by, .how-to {
+	font-family: 'Cherry Cream Soda', 'Rock Salt', cursive;
+	display: none;
+	color: red;
+	font-family: comical;
+	font-size: 50px;
+	width: 650px;
+}
+
+.brought-by {
+	text-align: center;
+	margin-top: 150px;
+}
+
+.how-to {
+	padding-top: 70px;
+}
+
+.how-to p {
+	width: 50%;
+	color: black;
+	font-size: 24px;
+	line-height: 45px;
+}
+
+.how-to p + p {
+	margin-left: 275px;
+}
+
+.courtesy {
+	color: white;
+	font-size: 12px;
 }

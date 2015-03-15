@@ -79,5 +79,17 @@ function playGame() {
 
 function intro() {
 	playIntro();
-
+ 	$('.sf-logo').fadeIn(3500, function() {
+    	$(this).fadeOut(1000, function() {
+      		$('.brought-by').fadeIn(1500, function() {
+        		$(this).fadeOut(1000, function() {
+          			$('.jquery-logo').fadeIn(1500, function() {
+            			$(this).fadeOut(1500, function() {
+              				$('.how-to').fadeIn(1000);
+            			});
+          			})
+        		})
+      		})
+    	})
+  	})
 }
