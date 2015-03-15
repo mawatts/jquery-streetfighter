@@ -86,6 +86,9 @@ function intro() {
           			$('.jquery-logo').fadeIn(1500, function() {
             			$(this).fadeOut(1500, function() {
               				$('.how-to').fadeIn(1000);
+              				$('.text-box').fadeIn(1000);
+              				$('.text-bubble-1').fadeIn(1000);
+              				$('.text-bubble-2').fadeIn(1000);
             			});
           			})
         		})
